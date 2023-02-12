@@ -1,7 +1,7 @@
 .ProductShop {
     position: absolute;
-    top: 110px;
-    right: 220px;
+    top: 100px;
+    right: 200px;
     width: clamp(300px, 40vw, 500px);
 }
 
@@ -62,6 +62,7 @@
     .ProductShop {
         position: static;
         margin: 0 auto;
+        margin-top: 150px;
         text-align: center;
     }
 }

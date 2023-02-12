@@ -1,6 +1,9 @@
+import HeroBanner from "../MAIN/HeroBanner/HeroBanner";
+
 const LandingPage = () => {
     return (
         <section>
+            <HeroBanner />
             <section>GOOD4ME DEAL</section>
             <section>TAKE CONTROL</section>
             <section>OUR PRODUCTS</section>
