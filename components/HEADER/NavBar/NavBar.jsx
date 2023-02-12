@@ -65,9 +65,9 @@ const NavBar = () => {
         <nav className="NavBar p-5 sm:py-[10px] sm:px-[50px] md:px-[100px] flex flex-wrap justify-between items-center bg-white">
             <button className="MobileMenu flex flex-col items-end gap-1 lg:hidden "
             onClick={toggleMenu}>
-                <img src={menuIcon1} alt="" className="MenuIcon1 w-[30px] " />
-                <img src={menuIcon2} alt="" className="MenuIcon2 w-[30px] "/>
-                <img src={menuIcon3} alt="" className="MenuIcon3 w-[20px] "/>
+                <img src={menuIcon1} alt="" className="MenuIcon1 MenuIcon w-[30px] " />
+                <img src={menuIcon2} alt="" className="MenuIcon2 MenuIcon w-[30px] "/>
+                <img src={menuIcon3} alt="" className="MenuIcon3 MenuIcon w-[20px] "/>
             </button>
             <div className="MobileMenu__NavBar absolute top-[100px] left-[50px] hidden lg:hidden justify-between gap-5"
             style={{display: menuvisible}}>

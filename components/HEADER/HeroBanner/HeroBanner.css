@@ -12,9 +12,8 @@
     height: 100%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 600px) {
     .HeroBanner__Img {
-        width: 100%;
-        height: 150px;
+        max-height: 130px;
     }
 }

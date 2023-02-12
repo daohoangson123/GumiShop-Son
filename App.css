@@ -1,7 +1,7 @@
 :root {
-    --SignBar: #F6623E;
-    --textDefault: #ffffff;
-    --textAlt: #000000;
+    --color-primary: #F6623E;
+    --color-default: #ffffff;
+    --color-alt: #000000;
 }
 
 * {
@@ -9,4 +9,8 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

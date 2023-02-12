@@ -10,9 +10,14 @@
     flex-direction: column;
     align-items: end;
     gap: 5px;
+    padding: 5px;
     border: none;
     background: none;
     cursor: pointer;
+}
+
+.MobileMenu:hover {
+    background: rgba(0, 0, 0, .1);
 }
 
 .MenuIcon1, .MenuIcon2 {
@@ -33,7 +38,7 @@
 }
 
 .MobileMenu__NavBar > a:visited {
-    color: var(--textDefault);
+    color: var(--color-default);
 }
 
 .MobileMenu__Item {
@@ -52,7 +57,7 @@
 }
 
 .NavBar__List > a:visited {
-    color: var(--textAlt);
+    color: var(--color-alt);
 }
 
 .SearchCart {

@@ -1,0 +1,67 @@
+.ProductShop {
+    position: absolute;
+    top: 110px;
+    right: 220px;
+    width: clamp(300px, 40vw, 500px);
+}
+
+.ProductShop__Title {
+    font-family: Jost;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 600;
+    line-height: 42px;
+    color: var(--color-primary);
+}
+
+.ProductShop__Name {
+    font-family: Jost;
+    font-size: clamp(28px, 3vw, 56px);
+    font-weight: 600;
+    line-height: 72px;
+}
+
+.ProductShop__Des {
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 30px;
+}
+
+.ProductShop__Btn {
+    padding: 13px 25px;
+    border: none;
+    color: var(--color-default);
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.ProductShop__Btn:hover > a {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 1600px) {
+    .ProductShop {
+        top: 200px;
+        right: 300px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .ProductShop {
+        top: 30px;
+        right: 50px;
+    }
+
+    .ProductShop__Title, .ProductShop__Name {
+        line-height: normal;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ProductShop {
+        position: static;
+        margin: 0 auto;
+        text-align: center;
+    }
+}

@@ -3,8 +3,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    color: var(--textDefault);
-    background-color: var(--SignBar);
+    color: var(--color-default);
+    background-color: var(--color-primary);
     padding: 15px 120px;
 }
 
@@ -23,12 +23,12 @@
     justify-content: center;
     align-items: center;
     padding-right: 5px;
-    color: var(--textDefault);
-    border-right: solid 1px var(--textDefault);
+    color: var(--color-default);
+    border-right: solid 1px var(--color-default);
 }
 
 .SignBar__SignRegis--Component > a:visited {
-    color: var(--textDefault);
+    color: var(--color-default);
 }
 
 .SignBar__SignRegis--Languages {
@@ -45,13 +45,13 @@
 }
 
 .LangSelect {
-    color: var(--textDefault);
+    color: var(--color-default);
     background: transparent;
     border: none;
 }
 
 .LangOption {
-    color: var(--textAlt);
+    color: var(--color-alt);
 }
 
 @media only screen and (max-width: 1200px) {
