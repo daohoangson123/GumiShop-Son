@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import './SignBar.css'
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './SignBar.css';
 
 const text = 'Afterpay, Laybuy & Genoapay | Free Delivery New Zealand + Australia*'
 

@@ -1,69 +1,56 @@
-.ProductShop {
-    position: absolute;
-    top: 100px;
-    right: 200px;
-    width: clamp(300px, 40vw, 500px);
+.Product__Banner {
+    width: clamp(350px, 30vw, 500px);
 }
 
-.ProductShop__Title {
-    font-family: Jost;
+.ProductBanner__Title {
+    font-family: var(--font-default);
     font-size: clamp(20px, 3vw, 26px);
     font-weight: 600;
     line-height: 42px;
     color: var(--color-primary);
 }
 
-.ProductShop__Name {
-    font-family: Jost;
+.ProductBanner__Name {
+    font-family: var(--font-default);
     font-size: clamp(28px, 3vw, 56px);
     font-weight: 600;
     line-height: 72px;
 }
 
-.ProductShop__Des {
-    font-family: Jost;
-    font-size: 20px;
+.ProductBanner__Des {
+    font-family: var(--font-default);
+    font-size: 16px;
     font-weight: 400;
     line-height: 29px;
     margin-bottom: 30px;
+    color: var(--color-text);
 }
 
-.ProductShop__Btn {
+.Product__Btn {
     padding: 13px 25px;
     border: none;
+    font-weight: 500;
     color: var(--color-default);
     background-color: var(--color-primary);
     cursor: pointer;
 }
 
-.ProductShop__Btn:hover > a {
+.Product__Btn:hover > a {
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 1600px) {
-    .ProductShop {
-        top: 200px;
-        right: 300px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .ProductShop {
-        top: 20px;
-        right: 100px;
-    }
-}
-
 @media only screen and (max-width: 768px) {
-    .ProductShop__Name, .ProductShop__Des {
-        line-height: normal;
-        color: var(--color-default);
+    .Product__Banner {
+        position: relative;
+        padding: 20px 10px;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .5);
     }
 
-    .ProductShop {
-        top: 50px;
-        right: 10px;
-        background: rgba(0, 0, 0, .7);
-        padding: 25px;
+    .ProductBanner__Name, .ProductBanner__Des {
+        color: var(--color-default);
+        line-height: 30px;
     }
 }

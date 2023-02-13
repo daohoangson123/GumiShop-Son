@@ -1,25 +1,105 @@
-.SliderContainer {
-    height: 500px;
-}
-
-.SliderBanner {
+.BannerContainer {
+    position: relative;
     width: 100%;
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-@media only screen and (min-width: 1440px) {
+.BannerContainer_2 {
+    background-position-x: 80%;
+}
+
+.SliderBanner_1 {
+    position: absolute;
+    top: 150px;
+    right: 390px;
+}
+
+.SliderBanner_2 {
+    position: absolute;
+    top: 150px;
+    left: 270px;
+}
+
+@media only screen and (min-width: 1600px) {
     .SliderContainer {
-        height: 70vh;
+        height: 700px;
     }
 }
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 1600px) {
+    .SliderContainer {
+        height: 540px;
+    }
+
+    .SliderBanner_1 {
+        top: 75px;
+        right: 170px;
+    }
+
+    .SliderBanner_2 {
+        top: 100px;
+        left: 150px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     .SliderContainer {
         height: 400px;
     }
 
-    .SliderBanner {
-        background-position: center;
+    .SliderBanner_1 {
+        top: 20px;
+        right: 100px;
+    }
+
+    .SliderBanner_2 {
+        top: 0;
+        left: 100px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .SliderContainer {
+        height: 400px;
+    }
+
+    .BannerContainer_1 {
+        background-size: cover;
+        background-position-x: -100px;
+    }
+
+    .SliderBanner_1 {
+        top: 0;
+        right: 50px;
+    }
+
+    .SliderBanner_2 {
+        top: 0;
+        left: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .SliderContainer {
+        height: 280px;
+    }
+
+    .BannerContainer_1 {
+        text-align: right;
+        background-position-x: -75px;
+    }
+
+    .BannerContainer_2 {
+        background-position-x: 50%;
+    }
+
+    .SliderBanner_1 {
+        right: 0;
+    }
+
+    .SliderBanner_2 {
+        left: 0;
     }
 }

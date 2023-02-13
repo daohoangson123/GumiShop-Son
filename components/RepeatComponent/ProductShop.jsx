@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
-import './ProductShop.css'
+// import { useState } from 'react';
+import './ProductShop.css';
+// import style from './ProductShop.module.css';
 
 const ProductToShop = ({...props}) => {
     return (
-        <div className="ProductShop">
-            <h2 className="ProductShop__Title">{props.title}</h2>
-            <h3 className="ProductShop__Name">{props.name}</h3>
-            <p className="ProductShop__Des">{props.des}</p>
-            <Link to='/shop' className="ProductShop__Btn">{props.btn}</Link>
+        <div className="Product__Banner ">
+            <h2 className="ProductBanner__Title">{props.title}</h2>
+            <h3 className="ProductBanner__Name">{props.name}</h3>
+            <p className="ProductBanner__Des">{props.des}</p>
+            <Link to='/shop' className="Product__Btn">{props.btn}</Link>
         </div>
     )
 }

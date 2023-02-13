@@ -7,7 +7,7 @@ const Good4Me = () => {
 
     return (
         <div>
-            <OwlCarousel className='owl-theme' nav autoplay={false} autoplayTimeout={5000} loop={true} dots={false}>
+            <OwlCarousel className='owl-theme' autoplay={false} autoplayTimeout={5000} loop={true} dots={false}>
                 <div className='item item1'>
                     <h4>1</h4>
                 </div>

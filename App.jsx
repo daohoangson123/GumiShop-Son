@@ -13,7 +13,6 @@ function App() {
       <main className=' text-center'>
         <Routes>
           <Route path='/' element={<LandingPage/>} />
-          <Route path='about' />
         </Routes>
       </main>
       {/* <footer className=' text-center'>

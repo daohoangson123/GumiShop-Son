@@ -2,6 +2,8 @@
     --color-primary: #F6623E;
     --color-default: #ffffff;
     --color-alt: #000000;
+    --color-text: #454545;
+    --font-default: 'Jost', sans-serif;
 }
 
 * {
