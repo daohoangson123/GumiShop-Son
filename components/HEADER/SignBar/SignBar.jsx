@@ -24,7 +24,7 @@ const SignBar = () => {
         }
     }
     useEffect(() => {
-    }, [flag])
+    }, [])
 
     return (
         <div className='SignBar container hidden md:flex justify-between gap-3 '>

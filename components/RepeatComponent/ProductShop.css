@@ -49,20 +49,28 @@
 
 @media only screen and (max-width: 1200px) {
     .ProductShop {
-        top: 30px;
-        right: 50px;
-    }
-
-    .ProductShop__Title, .ProductShop__Name {
-        line-height: normal;
+        top: 20px;
+        right: 100px;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+    .ProductShop__Name, .ProductShop__Des {
+        line-height: normal;
+        color: var(--color-default);
+    }
+
     .ProductShop {
-        position: static;
-        margin: 0 auto;
-        margin-top: 150px;
-        text-align: center;
+        background: rgba(0, 0, 0, .8);
+        top: 50px;
+        left: 50px;
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .ProductShop {
+        top: 50px;
+        left: 10px;
     }
 }

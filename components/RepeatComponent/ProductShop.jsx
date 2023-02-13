@@ -3,7 +3,7 @@ import './ProductShop.css'
 
 const ProductToShop = ({...props}) => {
     return (
-        <div className="ProductShop" style={{top: props.top, left: props.left}}>
+        <div className="ProductShop">
             <h2 className="ProductShop__Title">{props.title}</h2>
             <h3 className="ProductShop__Name">{props.name}</h3>
             <p className="ProductShop__Des">{props.des}</p>
