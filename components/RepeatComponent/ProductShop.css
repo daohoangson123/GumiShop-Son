@@ -54,23 +54,16 @@
     }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
     .ProductShop__Name, .ProductShop__Des {
         line-height: normal;
         color: var(--color-default);
     }
 
     .ProductShop {
-        background: rgba(0, 0, 0, .8);
         top: 50px;
-        left: 50px;
+        right: 10px;
+        background: rgba(0, 0, 0, .7);
         padding: 25px;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    .ProductShop {
-        top: 50px;
-        left: 10px;
     }
 }

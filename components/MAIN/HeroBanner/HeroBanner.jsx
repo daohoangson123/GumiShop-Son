@@ -1,7 +1,7 @@
 import heroBanner from '../../../img/HeroBanner.png';
 import heroBanner2 from '../../../img/HeroBanner1.png';
 import ProductShop from '../../RepeatComponent/ProductShop';
-import './HeroBanner.css'
+import './HeroBanner.css';
 
 const Banner1 = {
         bgUrl: heroBanner,
@@ -20,7 +20,7 @@ const Banner2 = {
 const HeroBanner = () => {
 
     return (
-        <div className='HeroBanner flex'>
+        <div className='HeroBanner'>
             <div className='HeroBanner__Container '>
                 <div className='Banner Banner1' style={{backgroundImage: `url(${Banner1.bgUrl})`}}>
                     <ProductShop

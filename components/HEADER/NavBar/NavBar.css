@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
+    transition: all ease-in-out .5s;
 }
 
 .MobileMenu {
@@ -32,7 +33,7 @@
     position: absolute;
     top: 70px;
     left: 0;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .9);
     width: 100%;
     z-index: 50;
 }
@@ -43,10 +44,11 @@
 
 .MobileMenu__Item {
     padding: 10px;
+    transition: all ease-in-out .5s;
 }
 
 .MobileMenu__Item:hover {
-    background: rgba(0, 0, 0, .7);
+    background: rgba(255, 255, 255, .3);
 }
 
 .NavBar__Logo {

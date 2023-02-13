@@ -1,0 +1,25 @@
+.SliderContainer {
+    height: 500px;
+}
+
+.SliderBanner {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 1440px) {
+    .SliderContainer {
+        height: 70vh;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .SliderContainer {
+        height: 400px;
+    }
+
+    .SliderBanner {
+        background-position: center;
+    }
+}
