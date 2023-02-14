@@ -8,10 +8,6 @@
     padding: 15px 120px;
 }
 
-/* .SignBar__text {
-
-} */
-
 .SignBar__SignRegis {
     display: flex;
     gap: 10px;
@@ -54,7 +50,7 @@
     color: var(--color-alt);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     .SignBar {
         display: none;
     }

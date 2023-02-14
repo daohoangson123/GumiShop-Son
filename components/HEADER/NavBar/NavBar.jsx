@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logoIcon from "../../../icon/LogoIcon.png";
 import menuIcon1 from "../../../icon/MenuIcon1.png";
 import menuIcon2 from "../../../icon/MenuIcon2.png";
 import menuIcon3 from "../../../icon/MenuIcon3.png";
@@ -7,7 +6,7 @@ import searchIcon from "../../../icon/SearchIcon.svg";
 import cartIcon from "../../../icon/CartIcon.svg";
 import usertIcon from "../../../icon/UserIcon.png";
 import "./NavBar.css"
-import { useEffect ,useState } from "react";
+import { useEffect , useState } from "react";
 
 const Nav_Items = [
     {
@@ -42,7 +41,7 @@ const NavBar = () => {
                 setMenuvisible("none")
             }
         }
-        const mq = window.matchMedia('(min-width: 1200px)');
+        const mq = window.matchMedia('(min-width: 1024px)');
 
         useEffect(() => {
         // initial check to toggle something on or off
@@ -62,14 +61,14 @@ const NavBar = () => {
         }
         };
     return (
-        <nav className="NavBar p-5 sm:py-[10px] sm:px-[50px] md:px-[100px] flex flex-wrap justify-between items-center bg-white">
-            <button className="MobileMenu flex flex-col items-end gap-1 lg:hidden "
+        <nav className="NavBar ">
+            <button className="MobileMenu "
             onClick={toggleMenu}>
-                <img src={menuIcon1} alt="" className="MenuIcon1 MenuIcon w-[30px] " />
-                <img src={menuIcon2} alt="" className="MenuIcon2 MenuIcon w-[30px] "/>
-                <img src={menuIcon3} alt="" className="MenuIcon3 MenuIcon w-[20px] "/>
+                <img src={menuIcon1} alt="" className="MenuIcon1 MenuIcon " />
+                <img src={menuIcon2} alt="" className="MenuIcon2 MenuIcon "/>
+                <img src={menuIcon3} alt="" className="MenuIcon3 MenuIcon "/>
             </button>
-            <div className="MobileMenu__NavBar absolute top-[100px] left-[50px] hidden lg:hidden justify-between gap-5"
+            <div className="MobileMenu__NavBar"
             style={{display: menuvisible}}>
                 {Nav_Items.map((item) => (
                     <Link to={item.path} key={item.name} className='MobileMenu__Item hover:underline '>
@@ -77,15 +76,15 @@ const NavBar = () => {
                     </Link>
                 ))}
             </div>
-            <img src={logoIcon} alt="Logo" className="NavBar__Logo p-1 sm:p-0 w-[200px] sm:w-[250px] h-[50px] " />
-            <div className="NavBar__List hidden lg:flex justify-center sm:gap-5 2xl:gap-20">
+            <h1 className="NavBar__Logo">GOOD<span>4</span>ME.</h1>
+            <div className="NavBar__List">
                 {Nav_Items.map((item) => (
                     <Link to={item.path} key={item.name} className=' hover:underline '>
                         {item.name}
                     </Link>
                 ))}
             </div>
-            <div className="SearchCart flex items-center gap-2">
+            <div className="SearchCart">
                 <Link to='/search' >
                     <img className='NavBar__SearchIcon Icon' src={searchIcon} alt="search" />
                 </Link>

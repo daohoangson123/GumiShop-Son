@@ -1,9 +1,17 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 .NavBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    gap: 10px;
+    padding: 30px 100px;
     transition: all ease-in-out .5s;
+    background: var(--color-default);
 }
 
 .MobileMenu {
@@ -13,12 +21,14 @@
     gap: 5px;
     padding: 5px;
     border: none;
+    border-radius: 5px;
     background: none;
     cursor: pointer;
+    transition: all ease-in-out .3s;
 }
 
 .MobileMenu:hover {
-    background: rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, .3);
 }
 
 .MenuIcon1, .MenuIcon2 {
@@ -31,11 +41,10 @@
 
 .MobileMenu__NavBar {
     position: absolute;
-    top: 70px;
+    top: 87px;
     left: 0;
     background: rgba(0, 0, 0, .9);
     width: 100%;
-    z-index: 50;
 }
 
 .MobileMenu__NavBar > a:visited {
@@ -52,14 +61,24 @@
 }
 
 .NavBar__Logo {
-    width: 200px;
-    height: 50px;
+    font-size: clamp(30px, 1vw, 36px);
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-alt);
+}
+
+.NavBar__Logo > span {
+    font-size: clamp(20px, 1vw, 26px);
 }
 
 .NavBar__List {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
+    font-family: var(--font-default);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .NavBar__List > a:visited {
@@ -74,16 +93,21 @@
 .Icon {
     width: 20px;
     height: 20px;
+    transition: all ease-in-out .3s;
+}
+
+.Icon:hover {
+    transform: translateY(-5px);
 }
 
 .NavBar__UserIcon {
     display: none;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
 
     .NavBar {
-        padding: 10px 30px;
+        padding: 30px 20px;
     }
 
     .MobileMenu {
@@ -96,11 +120,6 @@
     
     .MenuIcon3 {
         width: 20px;
-    }
-
-    .NavBar__Logo {
-        width: 150px;
-        height: 50px;
     }
 
     .NavBar__List {

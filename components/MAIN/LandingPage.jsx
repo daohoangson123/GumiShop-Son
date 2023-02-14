@@ -1,7 +1,7 @@
 // import HeroBanner from "../MAIN/HeroBanner/HeroBanner";
-import Good4Me from "./Good4Me/Good4Me";
-import Good4MeDeal from "./Good4MeDeal/Good4MeDeal";
 import SliderBanner from "./HeroBanner/SiderBanner";
+import Good4MeDeal from "./Good4MeDeal/Good4MeDeal";
+// import Good4Me from "./Good4Me/Good4Me";
 
 const LandingPage = () => {
     return (
@@ -14,7 +14,7 @@ const LandingPage = () => {
             <section>CAROUSEL</section>
             <section>SHOP ALL</section>
             <section>LATEST NEWS</section> */}
-            <Good4Me />
+            {/* <Good4Me /> */}
         </>
     )
 }

@@ -4,6 +4,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import heroBanner from '../../../img/HeroBanner.png';
 import heroBanner1 from '../../../img/HeroBanner1.png';
 import ProductShop from '../../RepeatComponent/ProductShop';
+import heroBannerBot from '../../../img/HeroBannerBot.png';
 import './SliderBanner.css';
 
 const Banner1 = {
@@ -23,7 +24,7 @@ const Banner2 = {
 const SliderBanner = () => {
     return (
         <div>
-            <OwlCarousel className='owl-theme' autoplay={true} items={1} nav={false} dots={false} loop>
+            <OwlCarousel className='owl-theme' autoplay={false} items={1} nav={false} dots={false} loop>
                 <div className='SliderContainer'>
                     <div className='BannerContainer BannerContainer_1' style={{backgroundImage: `url(${Banner1.bgUrl})`}}>
                         <div className='SliderBanner_1'>
@@ -34,6 +35,9 @@ const SliderBanner = () => {
                             btn="SHOP NOW"
                             />
                         </div>
+                    <div className='Silder1Bot'>
+                        <img src={heroBannerBot} alt="" />
+                    </div>
                     </div>
                 </div>
                 <div className='SliderContainer'>

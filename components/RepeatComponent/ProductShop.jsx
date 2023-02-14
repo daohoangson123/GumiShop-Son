@@ -6,8 +6,8 @@ import './ProductShop.css';
 const ProductToShop = ({...props}) => {
     return (
         <div className="Product__Banner ">
-            <h2 className="ProductBanner__Title">{props.title}</h2>
-            <h3 className="ProductBanner__Name">{props.name}</h3>
+            <div className="ProductBanner__Title">{props.title}</div>
+            <div className="ProductBanner__Name">{props.name}</div>
             <p className="ProductBanner__Des">{props.des}</p>
             <Link to='/shop' className="Product__Btn">{props.btn}</Link>
         </div>

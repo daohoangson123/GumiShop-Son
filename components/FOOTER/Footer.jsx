@@ -1,11 +1,18 @@
+import FooterBot from "./FooterBot";
+import './Footer.css'
+
 const Footer = () => {
     return (
-        <>
-            <div>GOOD4ME</div>
-            <div>KEEP IN TOUCH</div>
-            <div>MORE INFO</div>
-            <div>COPYRIGHT</div>
-        </>
+        <footer>
+            <div className="FooterTopBG"></div>
+            <div>
+                <div>GOOD4ME</div>
+                <div>KEEP IN TOUCH</div>
+                <div>MORE INFO</div>
+            </div>
+            <hr />
+                <FooterBot />
+        </footer>
     )
 }
 
