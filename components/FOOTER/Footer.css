@@ -11,7 +11,7 @@ footer > hr {
 .FooterTopBG {
     background-image: url(../../img/FooterTop.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
-    height: 130px;
+    min-height: 130px;
 }

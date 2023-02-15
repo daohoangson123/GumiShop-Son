@@ -1,5 +1,5 @@
 .Product__Banner {
-    width: clamp(350px, 30vw, 500px);
+    width: clamp(300px, 30vw, 500px);
 }
 
 .ProductBanner__Title {
@@ -41,15 +41,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .Product__Banner {
-        position: relative;
-        padding: 20px 10px;
-        top: 0;
-        right: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, .5);
-    }
-
     .ProductBanner__Name, .ProductBanner__Des {
         color: var(--color-default);
         line-height: 30px;

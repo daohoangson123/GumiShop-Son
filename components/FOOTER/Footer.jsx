@@ -1,15 +1,12 @@
 import FooterBot from "./FooterBot";
 import './Footer.css'
+import FooterTop from "./FooterTop";
 
 const Footer = () => {
     return (
         <footer>
             <div className="FooterTopBG"></div>
-            <div>
-                <div>GOOD4ME</div>
-                <div>KEEP IN TOUCH</div>
-                <div>MORE INFO</div>
-            </div>
+                <FooterTop />
             <hr />
                 <FooterBot />
         </footer>

@@ -41,7 +41,7 @@ const NavBar = () => {
                 setMenuvisible("none")
             }
         }
-        const mq = window.matchMedia('(min-width: 1024px)');
+        const mq = window.matchMedia('(min-width: 1025px)');
 
         useEffect(() => {
         // initial check to toggle something on or off
