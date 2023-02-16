@@ -4,14 +4,19 @@ header {
     z-index: 100;
 }
 
-.NavBar {
+.NavBar,
+.stickyNav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 30px 100px;
-    transition: all ease-in-out .5s;
-    background: var(--color-default);
+    transition: background ease-in-out .3s;
+}
+
+.stickyNav {
+    color: var(--color-default) !important;
+    background: rgba(246, 98, 62, .9);
 }
 
 .MobileMenu {
@@ -19,19 +24,30 @@ header {
     flex-direction: column;
     align-items: end;
     gap: 5px;
-    padding: 5px;
+    padding: 7px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     background: none;
     cursor: pointer;
     transition: all ease-in-out .3s;
 }
 
 .MobileMenu:hover {
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .5);
 }
 
-.MenuIcon1, .MenuIcon2 {
+.MobileMenu:hover .MenuIcon {
+    background: var(--color-default);
+}
+
+.MenuIcon {
+    height: 2px;
+    background: var(--color-text);
+    transition: all ease-in-out .3s;
+}
+
+.MenuIcon1,
+.MenuIcon2 {
     width: 50px;
 }
 
@@ -41,37 +57,46 @@ header {
 
 .MobileMenu__NavBar {
     position: absolute;
-    top: 87px;
+    top: 90px;
     left: 0;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(255, 255, 255, .7);
     width: 100%;
+    border: 5px solid black;
 }
 
 .MobileMenu__NavBar > a:visited {
-    color: var(--color-default);
+    color: var(--color-text);
 }
 
 .MobileMenu__Item {
-    padding: 10px;
-    transition: all ease-in-out .5s;
+    padding: 20px;
+    transition: padding ease-in-out .5s;
 }
 
 .MobileMenu__Item:hover {
-    background: rgba(255, 255, 255, .3);
+    color: var(--color-default) !important;
+    background: rgba(246, 98, 62, .9);
+    padding-left: 50px;
 }
 
 .NavBar__Logo {
+    display: flex;
     font-size: clamp(30px, 1vw, 36px);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 24px;
-    color: var(--color-alt);
 }
 
 .NavBar__Logo > span {
     font-size: clamp(20px, 1vw, 26px);
 }
 
-.NavBar__List {
+.navColor,
+.navColor > a:visited {
+    color: var(--color-default) !important;
+}
+
+.NavBar__List,
+.navColor {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -82,7 +107,7 @@ header {
 }
 
 .NavBar__List > a:visited {
-    color: var(--color-alt);
+    color: var(--color-text);
 }
 
 .SearchCart {
@@ -105,8 +130,7 @@ header {
 }
 
 @media only screen and (max-width: 1024px) {
-
-    .NavBar {
+    .NavBar, .stickyNav {
         padding: 30px 20px;
     }
 
@@ -122,7 +146,8 @@ header {
         width: 20px;
     }
 
-    .NavBar__List {
+    .NavBar__List,
+    .navColor {
         display: none;
     }
 

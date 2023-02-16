@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './FooterTop.css';
 
-const InfoList = [
+const info_List = [
     {
         path: '/',
         name: 'Shipping & Delivery',
@@ -54,7 +54,7 @@ const FooterTop = () => {
             <div className='FooterTop_Item3'>
                 <div className='FooterTop_Item3-title'>MORE INFO</div>
                 <div className='FooterTop_Item3-InfoList'>
-                    {InfoList.map((info) => (
+                    {info_List.map((info) => (
                         <div className='InfoList-item' key={info.name}>
                             <Link to={info.path}>
                                 {info.name}

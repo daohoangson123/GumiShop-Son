@@ -1,10 +1,10 @@
-import Product from "../../RepeatComponent/ProductGood4Me";
+import Product from "../../RepeatComponent/Product";
 import item1 from '../../../img/item1.png';
 import item2 from '../../../img/item2.png';
 import './Good4MeDeal.css';
+import Good4MeDealBot from "./Good4MeDealBot";
 
-
-const ProductList = [
+const products_List = [
     {
         url: item1,
         name: "MULTI-VITAMIN: EVERYDAY WELLNESS",
@@ -30,7 +30,7 @@ const Good4MeDeal = ({...props}) => {
             <hr />
             <p>Pick your beauty products today. 50% OFF on the most popular GOOD4ME. Order all classy products today!</p>
             <div className="ProductContainer">
-                {ProductList.map((product) => (
+                {products_List.map((product) => (
                     <div className="ProductItem" key={product.name}>
                         <Product
                         url={product.url}
@@ -40,6 +40,7 @@ const Good4MeDeal = ({...props}) => {
                     </div>
                 ))}
             </div>
+            <Good4MeDealBot />
         </section>
     )
 }

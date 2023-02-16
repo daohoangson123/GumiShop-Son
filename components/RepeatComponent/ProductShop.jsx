@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
 import './ProductShop.css';
-// import style from './ProductShop.module.css';
 
 const ProductToShop = ({...props}) => {
     return (

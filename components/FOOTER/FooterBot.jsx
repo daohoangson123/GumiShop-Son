@@ -13,25 +13,30 @@ import visa from '../../icon/visa.png';
 import './FooterBot.css';
 import { Link } from 'react-router-dom';
 
-const SocialIconsList = [
+const socialIcons_List = [
     {
         url: fb,
+        href: "https://www.facebook.com/",
     },
     {
         url: ig,
+        href: "https://www.instagram.com/",
     },
     {
         url: tw,
+        href: "https://twitter.com/",
     },
     {
         url: pi,
+        href: "https://www.pinterest.com/",
     },
     {
         url: yt,
+        href: "https://www.youtube.com/",
     },
 ]
 
-const PayIconsList = [
+const payIcons_List = [
     {
         url: amex,
     },
@@ -59,17 +64,17 @@ const FooterBot = () => {
     return (
         <div className='FooterBot'>
             <div className="SocialIcons FooterIcons">
-                {SocialIconsList.map((icon) => (
-                    <Link to='/social' key={icon.url}>
+                {socialIcons_List.map((icon) => (
+                    <a href={icon.href} key={icon.url} target='_blank' rel="noreferrer">
                         <img src={icon.url} alt="SocialIcons" />
-                    </Link>
+                    </a>
                 ))}
             </div>
             <div className="CopyRight">
                 &#169; 2021, <span>GOOD4ME</span>. Powered by Shopify
             </div>
             <div className="PaymentIcons FooterIcons">
-                {PayIconsList.map((icon) => (
+                {payIcons_List.map((icon) => (
                     <Link to='/payment' key={icon.url}>
                         <img src={icon.url} alt="PayIcons" />
                     </Link>

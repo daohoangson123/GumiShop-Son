@@ -27,6 +27,7 @@
 }
 
 .Product__Btn {
+    display: inline-block;
     font-family: var(--font-default);
     padding: 13px 25px;
     border: none;
