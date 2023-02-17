@@ -29,49 +29,53 @@ const nav_Items = [
 
 
 const NavBar = () => {
-    const [menuvisible, setMenuvisible] = useState("none");
-    const [stickyNav,setStickyNav] = useState("NavBar");
-    const [navColor,setNavColor] = useState("NavBar__List");
+    const [menuvisible, setMenuvisible] = useState("MobileMenu__NavBar");
+    const [stickyNav, setStickyNav] = useState("NavBar");
+    const [navColor, setNavColor] = useState("NavBar__List");
 
-    window.onscroll = function () {
-            if (window.pageYOffset > 0) {
-                setStickyNav("stickyNav");
-                setNavColor("navColor");
-            } else {
-                setStickyNav("NavBar");
-                setNavColor("NavBar__List");
-            }
-    }
+    const scrollNav = () => {
+        if (window.pageYOffset > 0) {
+            setStickyNav("stickyNav");
+            setNavColor("navColor");
+        } else {
+            setStickyNav("NavBar");
+            setNavColor("NavBar__List");
+        }
+    };
+
+    window.addEventListener("scroll", scrollNav);
 
     const toggleMenu = () => {
-            if(menuvisible === "none") {
-                setMenuvisible("grid")
-            } else {
-                setMenuvisible("none")
-            }
+        if(menuvisible === "MobileMenu__NavBar") {
+            setMenuvisible("MobileMenu__NavBar-actived");
+        } else {
+            setMenuvisible("MobileMenu__NavBar");
         }
-        const mq = window.matchMedia('(min-width: 1025px)');
+    };
+        
+    const mq = window.matchMedia('(min-width: 1025px)');
 
-        useEffect(() => {
+    useEffect(() => {
         // initial check to toggle something on or off
         toggle();
     
-        // returns true when window is => 640px
+        // returns true when window is => 1025px
         mq.addListener(toggle);
     
         // unmount cleanup handler
         return () => mq.removeListener(toggle);
-        }, );
-    
-      // toggle something based on matchMedia event
-        const toggle = () => {
+    }, );
+
+    // toggle something based on matchMedia event
+    const toggle = () => {
         if (mq.matches) {
-            setMenuvisible("none");
+            setMenuvisible("MobileMenu__NavBar");
         }
-        };
+    };
+
     return (
         <nav className={stickyNav}>
-            <button className="MobileMenu "
+            <button className="MobileMenu"
             onClick={toggleMenu}>
                 <div className="MenuIcon1 MenuIcon "></div>
                 <div className="MenuIcon2 MenuIcon "></div>
@@ -80,8 +84,7 @@ const NavBar = () => {
                 <img src={menuIcon2} alt="" className="MenuIcon2 MenuIcon "/>
                 <img src={menuIcon3} alt="" className="MenuIcon3 MenuIcon "/> */}
             </button>
-            <div className="MobileMenu__NavBar"
-            style={{display: menuvisible}}>
+            <div className={menuvisible}>
                 {nav_Items.map((item) => (
                     <Link to={item.path} key={item.name} className='MobileMenu__Item hover:underline '>
                         {item.name}

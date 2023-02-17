@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from './components/MAIN/LandingPage';
 import Header from './components/HEADER/Header';
 import Footer from './components/FOOTER/Footer';
+import BackTopBtn from './components/BACKTOPBTN/BackTopBtn';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         </Routes>
       </main>
         <Footer />
+        <BackTopBtn />
     </div>
   );
 }
