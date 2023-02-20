@@ -7,6 +7,8 @@ import Shop from './components/FUNCTIONPAGES/Shop';
 import BackTopWrapper from './components/BACKTOPWRAPPER/BackTopWrapper';
 import './App.css';
 import ProductDetail from "./components/RepeatComponent/ProductDetail";
+import SignIn from "./components/FUNCTIONPAGES/SignIn";
+import Regis from "./components/FUNCTIONPAGES/Regis";
 
 function App() {
   return (
@@ -21,8 +23,8 @@ function App() {
           <Route path='/stockist' element={<Shop/>} />
           <Route path='/wholesale' element={<Shop/>} />
           <Route path='/contact' element={<Shop/>} />
-          <Route path='/signin' element={<Shop/>} />
-          <Route path='/regis' element={<Shop/>} />
+          <Route path='/signin' element={<SignIn/>} />
+          <Route path='/regis' element={<Regis/>} />
           <Route path='/cart' element={<Shop/>} />
           <Route path='/products/:id' element={<ProductDetail/>} />
         </Routes>

@@ -40,7 +40,7 @@ const ProductDetail = () => {
                 <div className='Content_Container'>
                     <h2>{productDetail.name}</h2>
                     <p className='Detail'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, harum cum ab aperiam porro totam facilis sunt distinctio quo similique odit quam laudantium ex debitis neque quae? Porro, eligendi aliquid.</p>
-                    <div className="Product__Prices">
+                    <div className="Product_Prices">
                         <span className='SalePrices'>
                             Discount price: {"$" +productDetail.price + " NZD"}
                         </span>

@@ -6,6 +6,10 @@
     text-decoration: none;
 }
 
+.Product {
+    text-align: center;
+}
+
 .Product__Img-Container {
     position: relative;
     height: 400px;
