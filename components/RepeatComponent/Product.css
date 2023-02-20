@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fill, 400px);
     justify-content: center;
     gap: 30px;
+    text-decoration: none;
 }
 
 .Product__Img-Container {
@@ -41,6 +42,7 @@
     font-weight: 500;
     line-height: 24px;
     margin-top: 25px;
+    color: var(--color-alt);
 }
 
 .SalePrices {
@@ -52,7 +54,7 @@
 }
 
 .Prices {
-    font-family: Jost;
+    font-family: var(--font-default);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -62,7 +64,6 @@
 
 @media only screen and (max-width: 1440px) {
     .ProductContainer {
-
         grid-template-columns: repeat(auto-fill, 280px);
     }
     

@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
 import './Product.css';
 
-const Product = ({...props}) => {
+const Product = ({id, ...props}) => {
     return (
         <div className="Product">
+            <Link to={`/products/${id}`}>
             <div className="Product__Img-Container">
                 <abbr title={props.name}></abbr>
                 <img src={props.url} alt={props.name} />
@@ -16,15 +18,16 @@ const Product = ({...props}) => {
             </div>
             <div className="Product__Prices">
                 <span className='SalePrices'>
-                    {props.saleprices + " NZD"}
+                    {"$" +props.saleprices + " NZD"}
                 </span>
                 <span className='Prices'>
                     {props.prices === 0
                     ? null
-                    : props.prices + " NZD"
+                    : "$" + props.prices + " NZD"
                     }
                 </span>
             </div>
+            </Link>
         </div>
     )
 }

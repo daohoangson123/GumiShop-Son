@@ -1,0 +1,111 @@
+.ProductDetail_Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    margin: 20px 120px;
+}
+
+.BackBtnContainer {
+    position: relative;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.BackBtnContainer-Border {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    border: 1px solid var(--color-primary);
+    transition: all ease-in-out .5s;
+}
+
+.BackBtnContainer:hover .BackBtnContainer-Border {
+    width: 70px;
+    height: 70px;
+    transform: rotate(135deg);
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.BackBtnContainer:hover .BackBtn {
+    color: var(--color-default);
+    width: 60px;
+    height: 60px;
+}
+
+.BackBtn {
+    position: absolute;
+    font-family: var(--font-default);
+    font-size: 16px;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    z-index: 1;
+}
+
+.ProductDetail_Img-Container img {
+    width: 400px;
+    height: 400px;
+}
+
+.Content_Container {
+    display: grid;
+    gap: 20px;
+    place-items: center;
+}
+
+.Detail {
+    font-family: var(--font-default);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-text);
+    width: clamp(280px, 40vw, 500px);
+}
+
+.Product__Prices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Saving {
+    font-family: var(--font-default);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.AddToCartBtn {
+    font-family: var(--font-default);
+    font-size: 18px;
+    background: var(--color-primary);
+    color: var(--color-default);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+
+@media only screen and (max-width: 1440px) {
+    .ProductDetail_Container {
+        margin: 20px;
+    }
+
+    .ProductDetail_Img-Container img {
+        width: clamp(280px, 40vw, 350px);
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ProductDetail_Img-Container img {
+        height: 280px;
+    }
+}
