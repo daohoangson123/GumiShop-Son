@@ -1,13 +1,43 @@
-import { Link } from 'react-router-dom';
 import './Product.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { myCartSelector} from '../../REDUX/Selectors/Selector';
+import { addToCart, removeInCart } from '../../REDUX/Actions/Action';
+import { useState } from 'react';
 
 const Product = ({id, ...props}) => {
+    const dispatch = useDispatch();
+    const myCart = useSelector(myCartSelector);
+    function handleAddToCart(product){
+            if(!added) {
+                dispatch(addToCart(product));
+                setAdded(true);
+            } else {
+                setAdded(false);
+            }
+    }
+
+    console.log(Object.values(myCart));
+
+    const [added, setAdded] = useState(false);
+
     return (
         <div className="Product">
-            <Link to={`/products/${id}`}>
             <div className="Product__Img-Container">
-                <abbr title={props.name}></abbr>
                 <img src={props.url} alt={props.name} />
+                <div className='AddToCart_Bg' style={{top: added ? 0 : null}}>
+                    <button className='AddToCart'
+                        onClick={() => 
+                            handleAddToCart({
+                                img: props.url,
+                                name: props.name,
+                                price: props.prices,
+                            })}>
+                            {!added
+                            ? "AddToCart"
+                            : "Added"
+                            }
+                    </button>
+                </div>
                 {props.sale
                 ? <div className='Product__Sale'>ON SALE</div>
                 : null
@@ -27,7 +57,6 @@ const Product = ({id, ...props}) => {
                     }
                 </span>
             </div>
-            </Link>
         </div>
     )
 }

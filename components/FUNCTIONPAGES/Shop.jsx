@@ -2,7 +2,10 @@ import './Shop.css';
 import Product from '../RepeatComponent/Product';
 import { useEffect, useState } from 'react';
 
+
 const Shop = () => {
+    
+
     const [api, setApi] = useState([]);
     const [result, setResult] = useState([]);
 

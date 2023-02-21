@@ -5,10 +5,10 @@ import Footer from './components/FOOTER/Footer';
 import BackTopBtn from './components/BACKTOPBTN/BackTopBtn';
 import Shop from './components/FUNCTIONPAGES/Shop';
 import BackTopWrapper from './components/BACKTOPWRAPPER/BackTopWrapper';
-import './App.css';
-import ProductDetail from "./components/RepeatComponent/ProductDetail";
 import SignIn from "./components/FUNCTIONPAGES/SignIn";
 import Regis from "./components/FUNCTIONPAGES/Regis";
+import './App.css';
+import Cart from "./components/FUNCTIONPAGES/Cart";
 
 function App() {
   return (
@@ -25,8 +25,7 @@ function App() {
           <Route path='/contact' element={<Shop/>} />
           <Route path='/signin' element={<SignIn/>} />
           <Route path='/regis' element={<Regis/>} />
-          <Route path='/cart' element={<Shop/>} />
-          <Route path='/products/:id' element={<ProductDetail/>} />
+          <Route path='/cart' element={<Cart/>} />
         </Routes>
       </BackTopWrapper>
       </main>

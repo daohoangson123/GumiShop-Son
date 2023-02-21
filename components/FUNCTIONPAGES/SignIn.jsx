@@ -7,8 +7,8 @@ const SignIn = () => {
                 <fieldset>
                     <legend>Sign In</legend>
                     <div className='Input_Container'>
-                        <label htmlFor="Email">Email:</label>
-                        <input type="email" name="Email" id="Email" required autoComplete='off'/>
+                        <label htmlFor="User">UserName:</label>
+                        <input type="text" name="User" id="User" required autoComplete='off'/>
                         <label htmlFor="Pass">Password:</label>
                         <input type="password" name="Pass" id="Pass" required autoComplete='off'/>
                     </div>
