@@ -1,11 +1,12 @@
 import './Product.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { myCartSelector} from '../../REDUX/Selectors/Selector';
-import { addToCart, removeInCart } from '../../REDUX/Actions/Action';
-import { useState } from 'react';
+import { addToCart } from '../../REDUX/Actions/Action';
+import { useEffect, useState } from 'react';
 
-const Product = ({id, ...props}) => {
+const Product = ({...props}) => {
     const dispatch = useDispatch();
+    const [added, setAdded] = useState(false);
     const myCart = useSelector(myCartSelector);
     function handleAddToCart(product){
             if(!added) {
@@ -16,10 +17,6 @@ const Product = ({id, ...props}) => {
             }
     }
 
-    console.log(Object.values(myCart));
-
-    const [added, setAdded] = useState(false);
-
     return (
         <div className="Product">
             <div className="Product__Img-Container">
@@ -28,9 +25,11 @@ const Product = ({id, ...props}) => {
                     <button className='AddToCart'
                         onClick={() => 
                             handleAddToCart({
+                                id: props.id,
                                 img: props.url,
                                 name: props.name,
-                                price: props.prices,
+                                price: props.saleprices,
+                                amount: 1,
                             })}>
                             {!added
                             ? "AddToCart"
@@ -48,7 +47,7 @@ const Product = ({id, ...props}) => {
             </div>
             <div className="Product__Prices">
                 <span className='SalePrices'>
-                    {"$" +props.saleprices + " NZD"}
+                    {"$" + props.saleprices + " NZD"}
                 </span>
                 <span className='Prices'>
                     {props.prices === 0

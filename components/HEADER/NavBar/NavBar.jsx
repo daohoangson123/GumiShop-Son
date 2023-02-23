@@ -109,7 +109,11 @@ const NavBar = () => {
                         <img className='NavBar__CartIcon Icon' src={cartIcon} alt="cart" />
                         {Object.keys(myCart).length === 0
                         ? <></>
-                        : <div className="Cart_Notify">{Object.keys(myCart).length}</div>
+                        :   <div className="Cart_Notify">
+                                <span>
+                                    {Object.keys(myCart).length}
+                                </span>
+                            </div>
                         }
                     </div>
                 </Link>

@@ -172,13 +172,21 @@ header a:hover {
 
 .Cart_Notify {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    display: grid;
+    place-items: center;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--color-default);
     border-radius: 100%;
     background: var(--color-primary);
-    top: 0;
-    right: 0;
+    color: var(--color-default);
+    top: -5px;
+    right: -10px;
     transition: all ease-in-out .3s;
+}
+
+.Cart_Notify span {
+    font-size: 12px;
 }
 
 @media only screen and (max-width: 1024px) {
