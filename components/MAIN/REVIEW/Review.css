@@ -1,0 +1,20 @@
+.Review {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Reivew__Slider {
+    width: 620px;
+    height: 455px;
+
+}
+
+.Reivew__Slider-Item {
+    width: 620px;
+    margin: 214px 0;
+}
+
+.Review__Img {
+    width: 534px;
+    height: 539px;
+}
